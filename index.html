@@ -3,48 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drock-paper-scissor</title>
+    <title>Rock-paper-scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="action.js"></script>
 </head>
 <body>
-    <script>
-        let userChoice,computerChoice;
-        let rand;
-        userChoice= prompt("Enter rock, paper or scissor");
-        rand =Math.floor( Math.random() * 3);
-        switch(rand){
-            case 0:
-                computerChoice = "rock";
-                break;
-            case 1:
-                computerChoice = "scissor";
-                break;
-            case 2:
-                computerChoice ="paper";
-                break;    
-        }
-        console.log("computer choice = " + computerChoice+'\n');
-        if(computerChoice == userChoice){
-            console.log("draw");
-        }else if(userChoice == "scissor"){
-            if(computerChoice == "rock"){
-                console.log("lose");
-            }else{
-                console.log("win");
-            }
-        }else if(userChoice == "paper"){
-            if(computerChoice == "rock"){
-                console.log("win");
-            }else{
-                console.log("lose");
-            }
-        }else if(userChoice == "rock"){
-            if(computerChoice == "paper"){
-                console.log("lose");
-            }else{
-                console.log("win");
-            }
-        }
-        
-    </script>
+ <div class="header">
+    <h1 class="Tit">ROCK PAPER SCISSOR</h1>
+    <h2 class="Sub">Best of 3</h2>
+ </div>
+ <div class="container">
+    <div class="display player">
+        <div> PLAYER SCORE:</div>
+        <div class="score player">0</div>
+    </div>
+    <div class="display computer">
+        <div>BOT SCORE:</div>
+        <div class="score bot">0</div>
+    </div>
+
+ </div>
+    <div class="selection">
+        <div class="titselection">GOOD LUCK!!</div>
+        <div class="buttons">
+            <div>
+                <div> PAPER</div>
+                <input type="image" src="/img/paper.jpg" class="paper">
+            </div>
+            <div>
+                <div> ROCK</div>
+                <input type="image" src="/img/rock.jpg" class="rock">
+            </div>
+            <div>
+                <div>SCISSOR</div>
+                <input type="image" src="/img/scissor.jpg" class="scissor">
+            </div>
+        </div>
+    </div>
+    <div class="output">
+
+    </div>
 </body>
 </html>
